@@ -1,0 +1,70 @@
+{
+  "name": "test-node-backend",
+  "version": "1.0.0",
+  "description": "A simple project example with node and test",
+  "main": "./src/app.js",
+  "scripts": {
+    "start": "node ./src/app.js",
+    "local": "nodemon ./src/app.js",
+    "test": "jest --passWithNoTests --colors --runInBand --detectOpenHandles --no-cache --forceExit",
+    "test:silent": "jest --passWithNoTests --colors --silent --verbose",
+    "test:watch": "npm test -- --watch",
+    "test:staged": "jest --passWithNoTests",
+    "test:ci": "npm run test:silent --coverage --no-cache",
+    "prepare": "husky install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LucasNeri/2care"
+  },
+  "standard": {
+    "env": [
+      "jest"
+    ]
+  },
+  "keywords": [
+    "api",
+    "rest",
+    "mongoose",
+    "jwt",
+    "code clean",
+    "solid",
+    "tdd",
+    "jest",
+    "postman"
+  ],
+  "author": "Ialbas Junior",
+  "license": "Mit",
+  "bugs": {
+    "url": "https://github.com/ialbas/test-node-backend/issues"
+  },
+  "homepage": "https://github.com/ialbas",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "bcrypt": "^5.0.1",
+    "body-parser": "^1.19.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "fast-glob": "^3.2.11",
+    "jsonwebtoken": "^8.5.1",
+    "mocha": "^9.2.2",
+    "mongoose": "^6.2.2",
+    "mongoose-paginate": "^5.0.3",
+    "uuid": "^8.3.2",
+    "uuid-validate": "^0.0.3",
+    "validator": "^13.7.0"
+  },
+  "devDependencies": {
+    "@shelf/jest-mongodb": "^2.2.0",
+    "@types/jest": "^27.4.1",
+    "chai": "^4.3.6",
+    "husky": "^7.0.4",
+    "jest": "^27.5.1",
+    "lint-staged": "^12.3.4",
+    "mongodb-memory-server": "^7.3.6",
+    "nodemon": "^2.0.15",
+    "standard": "^16.0.4",
+    "supertest": "^6.2.2"
+  }
+}
